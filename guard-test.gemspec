@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 1.9.2'
 
-  s.add_runtime_dependency 'test-unit', '~> 3.0'
+  s.add_runtime_dependency 'test-unit', '~> 2.5.5'
   s.add_runtime_dependency 'guard-compat', '~> 1.2'
 
   s.add_development_dependency 'bundler', '~> 1.6'
