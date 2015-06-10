@@ -100,6 +100,7 @@ module Guard
       def includes_and_requires(paths)
         parts = []
         parts << Array(options[:include]).map { |path| "-I\"#{path}\"" } unless zeus? || spring? || drb?
+        parts << Array(options[:include]).map { |path| path.split(':').map{|i| "\"#{i}\""} }.flatten if drb?
         parts << paths if zeus? || spring?
         parts << '-r bundler/setup' if bundler?
         parts << '-r rubygems' if rubygems?
